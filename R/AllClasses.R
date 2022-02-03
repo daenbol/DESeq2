@@ -284,9 +284,13 @@ the 'design' slot or to the 'full' argument of DESeq(), constructed using model.
       }
     }
 
+    print("1")
     modelMatrix <- stats::model.matrix.default(design, data=as.data.frame(colData(se)))
+    print(modelMatrix)
   } else if (is(design, "matrix")) {
+    print("2")
     modelMatrix <- design
+    print(modelMatrix)
   } else {
     stop("'design' should be a formula or a matrix")
   }
