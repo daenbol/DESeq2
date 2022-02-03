@@ -284,11 +284,11 @@ the 'design' slot or to the 'full' argument of DESeq(), constructed using model.
       }
     }
 
-    print("1")
+    print("11")
     modelMatrix <- stats::model.matrix.default(design, data=as.data.frame(colData(se)))
     print(modelMatrix)
   } else if (is(design, "matrix")) {
-    print("2")
+    print("22")
     modelMatrix <- design
     print(modelMatrix)
   } else {
